@@ -1,6 +1,4 @@
-# Baseline FNC implementation
-
-Information about the fake news challenge can be found on [FakeChallenge.org](http://fakenewschallenge.org).
+# FNC implementation
 
 This repository contains code that reads the dataset, extracts some simple features, trains a cross-validated model and
 performs an evaluation on a hold-out set of data.
@@ -13,8 +11,8 @@ Credit:
 * James Thorne (GitHub/Slack: @j6mes)
 * Yuxi Pan (GitHub: @yuxip, Slack: @yuxipan)
 
-## Questions / Issues
-Please raise questions in the slack group [fakenewschallenge.slack.com](https://fakenewschallenge.slack.com)
+## Download:
+The file "GoogleNews-vectors-negative300-small.bin" needs to be downloaded and placed in "Fake-News-Challenge---NLP" folder. "sklearn" should be updated.
 
 ## Getting Started
 The FNC dataset is inlcuded as a submodule and can be FNC Dataset is included as a submodule. You should download the fnc-1 dataset by running the following commands. This places the fnc-1 dataset into the folder fnc-1/
@@ -70,12 +68,4 @@ The ``report_score`` function in ``utils/score.py`` is based off the original sc
 
     report_score(actual, predicted)
 
-This will print a confusion matrix and a final score your classifier. We provide the scores for a classifier with a simple set of features which you should be able to match and eventually beat!
-
-|               | agree         | disagree      | discuss       | unrelated     |
-|-----------    |-------        |----------     |---------      |-----------    |
-|   agree       |    118        |     3         |    556        |    85         |
-| disagree      |    14         |     3         |    130        |    15         |
-|  discuss      |    58         |     5         |   1527        |    210        |
-| unrelated     |     5         |     1         |    98         |   6794        |
-Score: 3538.0 out of 4448.5	(79.53%)
+This will print a confusion matrix and a final score your classifier.
